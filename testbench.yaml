@@ -1,0 +1,3 @@
+providers:
+  - Stevebauman\AutodocFacades\AutodocServiceProvider
+  - Gilbitron\LaravelCanonicalLogger\CanonicalLoggerServiceProvider

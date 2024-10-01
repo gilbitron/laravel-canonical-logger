@@ -1,0 +1,53 @@
+{
+    "name": "gilbitron/laravel-canonical-logger",
+    "description": "A package to create 'canonical' logs lines for requests and queue jobs in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gilbert Pellegrom",
+            "email": "gilbert@pellegrom.me"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.5",
+        "pestphp/pest": "^3.2",
+        "stevebauman/autodoc-facades": "^1.2",
+        "timacdonald/log-fake": "^2.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gilbitron\\LaravelCanonicalLogger\\LaravelCanonicalLoggerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Gilbitron\\LaravelCanonicalLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "autodoc:facades": "@php vendor/bin/testbench autodoc:facades ./src",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
