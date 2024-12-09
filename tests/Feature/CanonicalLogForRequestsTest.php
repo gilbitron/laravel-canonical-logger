@@ -51,7 +51,9 @@ test('canonical line has expected context', function () {
             'http_uri',
             'http_status',
             'http_response_time',
-            'url'
+            'url',
+            'ip_address',
+            'user_agent',
         )
     );
 });

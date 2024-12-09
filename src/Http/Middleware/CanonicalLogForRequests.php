@@ -44,6 +44,9 @@ class CanonicalLogForRequests
             'user_id' => $request->user()?->id,
             'session_id' => $session?->getId(),
             'url' => $request->fullUrl(),
+            'ip_address' => $request->ip(),
+            'x_forwarded_for' => $request->header('x-forwarded-for'),
+            'user_agent' => $request->userAgent(),
         ];
 
         if ($exception = $request->attributes->get('handled_exception')) {
