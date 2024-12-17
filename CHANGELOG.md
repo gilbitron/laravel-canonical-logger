@@ -2,6 +2,12 @@
 
 All notable changes will be documented in this file.
 
+## v0.4.0 - 2024-12-17
+
+* Fix "undefined property" errors
+
+**Full Changelog**: https://github.com/gilbitron/laravel-canonical-logger/compare/0.3.0...0.4.0
+
 ## v0.3.0 - 2024-12-13
 
 * Reduce required PHP version to 8.1
