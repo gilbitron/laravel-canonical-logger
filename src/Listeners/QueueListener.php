@@ -64,7 +64,7 @@ class QueueListener extends ServiceProvider
             'user_id' => $event->job->payload()['canonical_logger']['user_id'] ?? null,
         ];
 
-        if ($event->exception ?? null) {
+        if ($event->exception ?? false) {
             $payload['exception_class'] = get_class($event->exception);
             $payload['exception_message'] = $event->exception->getMessage();
             $payload['exception_code'] = $event->exception->getCode();

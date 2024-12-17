@@ -14,7 +14,7 @@ class CanonicalLogForRequests
     {
         $response = $next($request);
 
-        if ($response->exception) {
+        if ($response->exception ?? false) {
             $request->attributes->set('handled_exception', $response->exception);
         }
 
